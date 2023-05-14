@@ -1,4 +1,9 @@
-import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
+import {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+  memo
+} from 'react';
 import cn from 'classnames';
 import styles from './ButtonBase.module.scss';
 
@@ -8,7 +13,7 @@ interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   animationDuration?: number;
 }
 
-export const ButtonBase = memo<ButtonBaseProps>(
+export const ButtonBase = memo<PropsWithChildren<ButtonBaseProps>>(
   ({
     className,
     startIcon = null,
