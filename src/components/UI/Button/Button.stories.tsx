@@ -1,14 +1,14 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Button } from './Button';
 
 export default {
   title: 'Button',
   component: Button
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
+const Template: StoryFn<typeof Button> = args => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
